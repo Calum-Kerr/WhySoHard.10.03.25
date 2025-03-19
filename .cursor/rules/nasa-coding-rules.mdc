@@ -1,0 +1,38 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# NASA Power of 10 Coding Rules
+
+Please follow these NASA safety-critical guidelines whenever generating code:
+
+1. **Keep control flow simple**  
+   Avoid complex flows like `goto`, recursion, and function pointers if possible.
+
+2. **Bound all loops**  
+   No loop should run endlessly. Always specify clear, finite limits.
+
+3. **No dynamic allocation after initialisation**  
+   Allocate everything needed at the start, then avoid further memory allocation calls.
+
+4. **Keep functions short**  
+   Try to keep each function small (roughly 60 lines or fewer).
+
+5. **Limit cyclomatic complexity**  
+   Keep complexity below 10 if you can.
+
+6. **Restrict pointer usage**  
+   Avoid multiple levels of indirection. Aim for only a single `*` if required.
+
+7. **No direct or indirect recursion**  
+   Use iterative solutions for reliability and clarity.
+
+8. **Validate data and return values**  
+   Always check inputs, function returns, and data bounds.
+
+9. **Enforce strict type checks**  
+   Use strong or static typing to avoid inadvertent type mixing.
+
+10. **Handle all errors**  
+   Detect and handle every failure case in a controlled way.
